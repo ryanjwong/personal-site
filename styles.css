@@ -1,0 +1,419 @@
+/* Berkeley Mono Font Integration */
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('https://usgraphics.com/static/fonts/berkeley-mono/berkeley-mono-variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* CSS Custom Properties */
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #1a1a1a;
+    --tertiary-bg: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --border-color: #333333;
+    
+    --font-mono: 'Berkeley Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header */
+.header {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.header-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -0.01em;
+}
+
+.header-role {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.header-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.header-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+}
+
+.header-links a:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+
+.header-ascii {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    white-space: pre;
+    line-height: 1.2;
+    margin-left: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+/* Sections */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+/* About Section */
+.about {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing-lg) 0;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.about-text strong {
+    color: var(--text-primary);
+}
+
+.about-ascii {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    white-space: pre;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Experience Section */
+.experience {
+    background-color: var(--primary-bg);
+}
+
+.experience-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.experience-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 180px;
+    margin-right: var(--spacing-sm);
+}
+
+.experience-value {
+    color: var(--text-secondary);
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background-color: var(--tertiary-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+}
+
+/* Projects Section */
+.projects {
+    background-color: var(--secondary-bg);
+}
+
+.projects-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.projects-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.projects-item:hover {
+    color: var(--text-primary);
+}
+
+.projects-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 182px;
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.projects-value {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.projects-item:hover .projects-value {
+    color: var(--text-primary);
+}
+
+/* Skills Section */
+.skills {
+    background-color: var(--primary-bg);
+}
+
+.skills-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.skills-item {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--spacing-sm);
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.skills-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 180px;
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.skills-value {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Certifications */
+.certifications {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.certifications-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: var(--tertiary-bg);
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+
+.cert-name {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--secondary-bg);
+}
+
+.contact-content {
+    max-width: 600px;
+}
+
+.contact-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    border-color: var(--text-muted);
+    background-color: var(--secondary-bg);
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 80px;
+    margin-right: var(--spacing-sm);
+}
+
+.contact-value {
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-bg);
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-md) 0;
+}
+
+.footer-text {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-name {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    
+    
+    
+    .contact-links {
+        gap: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .header-name {
+        font-size: 1.4rem;
+    }
+    
+    .header-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .header-ascii {
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+        align-self: center;
+    }
+}
