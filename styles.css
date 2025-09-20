@@ -9,13 +9,13 @@
 
 /* CSS Custom Properties */
 :root {
-    --primary-bg: #1a1a1a;
-    --secondary-bg: #1a1a1a;
-    --tertiary-bg: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
-    --text-muted: #888888;
-    --border-color: #333333;
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f8f8;
+    --tertiary-bg: #f0f0f0;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --text-muted: #000000;
+    --border-color: #cccccc;
     
     --font-mono: 'Berkeley Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     
@@ -166,9 +166,9 @@ section {
     display: flex;
     align-items: center;
     padding: var(--spacing-sm);
-    background-color: var(--tertiary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
 }
 
 .experience-label {
@@ -206,9 +206,9 @@ section {
     display: flex;
     align-items: center;
     padding: var(--spacing-sm);
-    background-color: var(--tertiary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     text-decoration: none;
     color: var(--text-secondary);
     transition: color 0.2s ease;
@@ -251,9 +251,9 @@ section {
     display: flex;
     align-items: flex-start;
     padding: var(--spacing-sm);
-    background-color: var(--tertiary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
 }
 
 .skills-label {
@@ -271,10 +271,10 @@ section {
 
 /* Certifications */
 .certifications {
-    background-color: var(--secondary-bg);
+    background-color: transparent;
     padding: var(--spacing-md);
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border-radius: 0;
+    border: none;
 }
 
 .certifications-title {
@@ -294,9 +294,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0.75rem;
-    background-color: var(--tertiary-bg);
-    border-radius: 3px;
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
     text-decoration: none;
     color: var(--text-secondary);
     transition: color 0.2s ease;
@@ -333,9 +333,9 @@ section {
     display: flex;
     align-items: center;
     padding: var(--spacing-sm);
-    background-color: var(--tertiary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     text-decoration: none;
 }
 
