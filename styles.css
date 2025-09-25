@@ -9,21 +9,21 @@
 
 /* CSS Custom Properties */
 :root {
-    --primary-bg: #ffffff;
+    --primary-bg: #f8f8f8;
     --secondary-bg: #f8f8f8;
-    --tertiary-bg: #f0f0f0;
-    --text-primary: #000000;
-    --text-secondary: #000000;
-    --text-muted: #000000;
-    --border-color: #cccccc;
+    --tertiary-bg: #f8f8f8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #444444;
+    --text-muted: #666666;
+    --border-color: #e5e5e5;
     
     --font-mono: 'Berkeley Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
     
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.5rem;
 }
 
 /* Reset and Base Styles */
@@ -55,7 +55,7 @@ body {
 
 /* Header */
 .header {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -81,12 +81,12 @@ body {
 .header-role {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .header-links {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     flex-wrap: wrap;
 }
 
@@ -94,7 +94,7 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.9rem;
-    padding: 0.5rem 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
     border-bottom: 1px solid transparent;
 }
 
@@ -115,20 +115,20 @@ body {
 
 /* Sections */
 section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .section-title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     color: var(--text-primary);
 }
 
 /* About Section */
 .about {
-    background-color: var(--secondary-bg);
-    padding: var(--spacing-lg) 0;
+    background-color: var(--primary-bg);
+    padding: var(--spacing-md) 0;
 }
 
 .about-text {
@@ -159,13 +159,13 @@ section {
 .experience-links {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 
 .experience-item {
     display: flex;
     align-items: center;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs);
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -175,7 +175,7 @@ section {
     font-weight: 600;
     color: var(--text-primary);
     min-width: 180px;
-    margin-right: var(--spacing-sm);
+    margin-right: var(--spacing-xs);
 }
 
 .experience-value {
@@ -193,19 +193,19 @@ section {
 
 /* Projects Section */
 .projects {
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg);
 }
 
 .projects-links {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 
 .projects-item {
     display: flex;
-    align-items: center;
-    padding: var(--spacing-sm);
+    align-items: flex-start;
+    padding: var(--spacing-xs);
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -221,14 +221,15 @@ section {
 .projects-label {
     font-weight: 600;
     color: var(--text-primary);
-    min-width: 182px;
-    margin-right: var(--spacing-sm);
+    min-width: 200px;
+    margin-right: var(--spacing-xs);
     flex-shrink: 0;
 }
 
 .projects-value {
     color: var(--text-secondary);
     line-height: 1.6;
+    flex: 1;
 }
 
 .projects-item:hover .projects-value {
@@ -243,14 +244,14 @@ section {
 .skills-links {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
 }
 
 .skills-item {
     display: flex;
     align-items: flex-start;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs);
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -260,7 +261,7 @@ section {
     font-weight: 600;
     color: var(--text-primary);
     min-width: 180px;
-    margin-right: var(--spacing-sm);
+    margin-right: var(--spacing-xs);
     flex-shrink: 0;
 }
 
@@ -271,7 +272,7 @@ section {
 
 /* Certifications */
 .certifications {
-    background-color: transparent;
+    background-color: var(--primary-bg);
     padding: var(--spacing-md);
     border-radius: 0;
     border: none;
@@ -281,20 +282,20 @@ section {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .cert-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--spacing-xs);
 }
 
 .cert-item {
     display: flex;
     align-items: center;
-    padding: 0.75rem;
-    background-color: transparent;
+    padding: var(--spacing-xs);
+    background-color: var(--primary-bg);
     border-radius: 0;
     border: none;
     text-decoration: none;
@@ -310,7 +311,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg);
 }
 
 .contact-content {
@@ -326,14 +327,14 @@ section {
 .contact-links {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 
 .contact-link {
     display: flex;
     align-items: center;
-    padding: var(--spacing-sm);
-    background-color: transparent;
+    padding: var(--spacing-xs);
+    background-color: var(--primary-bg);
     border: none;
     border-radius: 0;
     text-decoration: none;
@@ -341,14 +342,14 @@ section {
 
 .contact-link:hover {
     border-color: var(--text-muted);
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg);
 }
 
 .contact-label {
     font-weight: 600;
     color: var(--text-primary);
     min-width: 80px;
-    margin-right: var(--spacing-sm);
+    margin-right: var(--spacing-xs);
 }
 
 .contact-value {
@@ -359,7 +360,7 @@ section {
 .footer {
     background-color: var(--primary-bg);
     border-top: 1px solid var(--border-color);
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
 }
 
 .footer-text {
