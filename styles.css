@@ -191,6 +191,40 @@ section {
     border: 1px solid var(--border-color);
 }
 
+/* Coursework Section */
+.coursework {
+    background-color: var(--primary-bg);
+}
+
+.coursework-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.coursework-item {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--spacing-xs);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.coursework-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 200px;
+    margin-right: var(--spacing-xs);
+    flex-shrink: 0;
+}
+
+.coursework-value {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+}
+
 /* Projects Section */
 .projects {
     background-color: var(--primary-bg);
