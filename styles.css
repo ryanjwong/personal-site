@@ -1,23 +1,16 @@
-/* Berkeley Mono Font Integration */
-@font-face {
-    font-family: 'Berkeley Mono';
-    src: url('https://usgraphics.com/static/fonts/berkeley-mono/berkeley-mono-variable.woff2') format('woff2-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
+/* Font */
 
 /* CSS Custom Properties */
 :root {
-    --primary-bg: #f8f8f8;
-    --secondary-bg: #f8f8f8;
-    --tertiary-bg: #f8f8f8;
+    --primary-bg: #ffffff;
+    --secondary-bg: #ffffff;
+    --tertiary-bg: #ffffff;
     --text-primary: #1a1a1a;
     --text-secondary: #444444;
     --text-muted: #666666;
     --border-color: #e5e5e5;
     
-    --font-mono: 'Berkeley Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -38,7 +31,7 @@ html {
 }
 
 body {
-    font-family: var(--font-mono);
+    font-family: var(--font-main);
     background-color: var(--primary-bg);
     color: var(--text-primary);
     line-height: 1.5;
@@ -72,7 +65,7 @@ body {
 
 .header-name {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--spacing-xs);
     letter-spacing: -0.01em;
@@ -104,7 +97,7 @@ body {
 }
 
 .header-ascii {
-    font-family: var(--font-mono);
+    font-family: var(--font-main);
     font-size: 0.9rem;
     color: var(--text-muted);
     white-space: pre;
@@ -120,7 +113,7 @@ section {
 
 .section-title {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: var(--spacing-md);
     color: var(--text-primary);
 }
@@ -143,7 +136,7 @@ section {
 }
 
 .about-ascii {
-    font-family: var(--font-mono);
+    font-family: var(--font-main);
     font-size: 0.9rem;
     color: var(--text-muted);
     white-space: pre;
